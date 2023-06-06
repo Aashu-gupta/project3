@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+:root {
+  --primary: #393e3e;
+  --secondary: #145c72;
+  --secondary-light: #00a0d1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  font-size: 1.6rem;
+}
+
+.background {
+  background: url(background.png);
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  height: 100vh;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.box {
+  height: 60%;
+  width: 80%;
+  border-radius: 3.5rem;
+  background-color: var(--primary);
+  border: 0.5rem solid var(--secondary-light);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.calculation_form {
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 5rem;
+  place-content: center;
+  place-items: center;
+}
+.calculation_form input {
+  height: 4.4rem;
+  padding: 0 2rem;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  border: white 1px solid;
+  color: white;
+  font-size: 1.6rem;
+  width: 100%;
+  max-width: 30rem;
+}
+.calculation_form input::placeholder {
+  color: white;
+  font-size: 1.6rem;
+}
+.calculation_form input:focus-visible {
+  outline: 2px solid var(--secondary);
+  border: 2px solid var(--secondary);
+}
+
+.calculation_form button {
+  grid-column: 1/3;
+}
+
+.primary_btn {
+  font-size: 2.4rem;
+  width: 16rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  background-color: var(--secondary);
+  color: white;
+  border: none;
+}
+.primary-btn:hover {
+  opacity: 0.9;
+}
+
+.primary-btn:active {
+  opacity: 1;
+  background-color: var(--secondary-light);
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text h2 {
+  font-size: 6rem;
+  font-weight: 500;
+  line-height: 80%;
+}
+.text h1 {
+  font-size: 9rem;
+  font-weight: 600;
+  line-height: 90%;
+}
+.result {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+@media (max-width: 1400px) {
+    .container{
+        width: 100%;
+    }
+    .box{
+        height: 70%;
+    }
+}
+@media (max-width: 768px) {
+    .calculation_form {
+        grid-template-columns: 1fr;
+        padding: 3rem;       
+      }
+      .calculation_form button {
+        grid-column: 1/2;
+      }
+    .text h2 {
+        font-size: 3rem;
+        font-weight: 500;
+        line-height: 80%;
+      }
+      .text h1 {
+        font-size: 6rem;
+        font-weight: 600;
+        line-height: 90%;
+      }
+      .result {
+        font-size: 1.6rem;
+        padding: 2rem;
+      }
+}
